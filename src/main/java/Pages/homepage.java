@@ -1,21 +1,10 @@
 package Pages;
 
-import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
-import org.testng.annotations.Test;
-
-import Actions.actions;
-
-public class homepage extends actions {
+import org.openqa.selenium.By;
+public class HomePage {
+	//elements are found here, all by xpaths:
+    public static final By frontsection= By.xpath("//div[@id='htmlcontent_top']");
+    public static final By Contactbtn = By.xpath("//div[@id='contact-link']//a");
+    public static final By Dressesbtn= By.xpath("//ul[@class='sf-menu clearfix menu-content sf-js-enabled sf-arrows']/li/a[@title='Dresses']");
 	
-	 public homepage(WebDriver driver) {     //constructor for intialising the ContactUs class
-			super(driver);
-		}
-	 
-	 
-	 @Test
-	 public void Pageverification() {
-        Assert.assertEquals(Titleofstore(), "My Store");            
-    }
-
 }
